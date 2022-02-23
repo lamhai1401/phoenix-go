@@ -7,9 +7,13 @@
 
 # Test binary, built with `go test -c`
 *.test
+*.sum
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+*.god
+*.log
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+.vscode
