@@ -49,3 +49,14 @@ func (center *regCenter) unregister(puller *Puller) {
 		return
 	}
 }
+
+func (center *regCenter) getPullers(key string) []*Puller {
+	center.RLock()
+	defer center.RUnlock()
+
+	pullers := center.regs[key]
+	copied := make([]*Puller, len(pullers))
+	copy(copied, pullers)
+
+	return copied
+}
