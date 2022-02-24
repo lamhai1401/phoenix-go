@@ -1,1 +1,1 @@
-# phoenix-go
+# phoenix-go client
